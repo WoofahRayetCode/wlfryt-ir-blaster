@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wlfryt IR Blaster</string>
+    <string name="vizio_model">Vizio D24h-J09</string>
+    <string name="pointing_instruction">Aim your phone’s infrared emitter at the TV, then tap a button.</string>
+    <string name="power">Power</string>
+    <string name="volume_up">Volume Up</string>
+    <string name="volume_down">Volume Down</string>
+    <string name="volume_up_short">Vol +</string>
+    <string name="volume_down_short">Vol −</string>
+    <string name="input">Input</string>
+    <string name="mute">Mute</string>
+    <string name="arrow_up" translatable="false">↑</string>
+    <string name="arrow_down" translatable="false">↓</string>
+    <string name="arrow_left" translatable="false">←</string>
+    <string name="arrow_right" translatable="false">→</string>
+    <string name="direction_up">Up</string>
+    <string name="direction_down">Down</string>
+    <string name="direction_left">Left</string>
+    <string name="direction_right">Right</string>
+    <string name="ok">OK</string>
+    <string name="back">Back</string>
+    <string name="home">Home</string>
+    <string name="status_checking">Checking for an infrared emitter…</string>
+    <string name="status_ready">Infrared emitter ready.</string>
+    <string name="status_no_emitter">This phone has no infrared emitter.</string>
+    <string name="status_no_service">Android’s infrared service is unavailable on this phone.</string>
+    <string name="status_unsupported_carrier">This phone’s infrared emitter does not support 38 kHz.</string>
+    <string name="status_query_failed">Couldn’t check this phone’s infrared emitter.</string>
+    <string name="status_sending">Sending infrared signal…</string>
+    <string name="status_sent">Signal sent. Check the TV for a response.</string>
+    <string name="status_send_failed">Couldn’t send the infrared signal. Try again.</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="remote_background">#10181D</color>
+    <color name="remote_accent">#86E3CE</color>
+    <color name="remote_text">#F1F5F6</color>
+    <color name="remote_secondary_text">#B7C5CD</color>
+    <color name="remote_button">#2D494A</color>
+    <color name="remote_button_accent">#326557</color>
+    <color name="remote_button_disabled">#263139</color>
+    <color name="remote_panel">#1A282D</color>
+</resources>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/remote_background</item>
+        <item name="android:statusBarColor">@color/remote_background</item>
+        <item name="android:navigationBarColor">@color/remote_background</item>
+        <item name="android:colorAccent">@color/remote_accent</item>
+        <item name="android:colorButtonNormal">@color/remote_button</item>
+    </style>
+
+    <style name="RemoteButton" parent="android:style/Widget.Material.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">@drawable/remote_control</item>
+        <item name="android:backgroundTint">@color/remote_control_fill</item>
+        <item name="android:enabled">false</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingStart">6dp</item>
+        <item name="android:paddingEnd">6dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/remote_control_text</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="RemoteButton.Accent">
+        <item name="android:backgroundTint">@color/remote_accent_control_fill</item>
+    </style>
+
+    <style name="RemoteButton.Arrow">
+        <item name="android:textSize">23sp</item>
+    </style>
+
+    <style name="RemoteRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:baselineAligned">false</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="RemoteCluster">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:background">@drawable/remote_panel</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="DirectionRow" parent="RemoteRow">
+        <item name="android:layoutDirection">ltr</item>
+    </style>
+</resources>
