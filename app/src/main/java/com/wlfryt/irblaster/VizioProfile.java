@@ -1,7 +1,7 @@
 package com.wlfryt.irblaster;
 
 final class VizioProfile {
-    // Vizio XRT140R capture from Flipper-IRDB (39c3290b7177f5badb144215897d630531fefb10).
+    // NEC address for the Vizio XRT140R commands captured in Flipper-IRDB and the HDMI shortcuts below.
     // https://github.com/Lucaslhm/Flipper-IRDB/blob/39c3290b7177f5badb144215897d630531fefb10/TVs/Vizio/Vizio_XRT140R.ir
     private static final int ADDRESS = 0x04;
 
@@ -10,6 +10,10 @@ final class VizioProfile {
     enum Button {
         POWER(0x08),
         INPUT(0x2f),
+        // Discrete HDMI commands decoded from the Just Add Power Vizio IR control Pronto codes.
+        // https://support.justaddpower.com/kb/article/250-vizio-ir-control/
+        HDMI_1(0x81),
+        HDMI_2(0x82),
         VOLUME_UP(0x02),
         VOLUME_DOWN(0x03),
         MUTE(0x09),

@@ -30,7 +30,7 @@ public class VizioProfileTest {
         assertCommand(VizioProfile.Button.OK, 0x44);
         assertCommand(VizioProfile.Button.BACK, 0x4a);
         assertCommand(VizioProfile.Button.HOME, 0x2d);
-        assertEquals(12, VizioProfile.Button.values().length);
+        assertEquals(14, VizioProfile.Button.values().length);
     }
 
     private static void assertCommand(VizioProfile.Button button, int command) {

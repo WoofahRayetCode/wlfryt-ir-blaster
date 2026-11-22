@@ -8,6 +8,8 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
+import static com.wlfryt.irblaster.VizioProfile.Button.HDMI_1;
+import static com.wlfryt.irblaster.VizioProfile.Button.HDMI_2;
 import static com.wlfryt.irblaster.VizioProfile.Button.INPUT;
 import static com.wlfryt.irblaster.VizioProfile.Button.VOLUME_DOWN;
 import static com.wlfryt.irblaster.VizioProfile.Button.VOLUME_UP;
@@ -61,6 +63,21 @@ public class IrSenderTest {
         assertEquals(List.of(0L, 68L), starts);
         assertArrayEquals(VOLUME_DOWN.encode(), patterns.get(0));
         assertArrayEquals(INPUT.encode(), patterns.get(1));
+    }
+
+    @Test
+    public void hdmiShortcutsSendOneDiscreteFrameEachEvenWhenHeld() {
+        sender.send(HDMI_1, true, results::add);
+        runThrough(500);
+        sender.send(HDMI_2, true, results::add);
+        runThrough(1000);
+
+        assertEquals(List.of(0L, 500L), starts);
+        assertArrayEquals(new int[] {0x04, 0xfb, 0x81, 0x7e},
+                NecEncoderTest.decodeBytes(patterns.get(0)));
+        assertArrayEquals(new int[] {0x04, 0xfb, 0x82, 0x7d},
+                NecEncoderTest.decodeBytes(patterns.get(1)));
+        assertEquals(List.of(true, true), results);
     }
 
     @Test

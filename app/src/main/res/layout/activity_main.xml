@@ -64,6 +64,19 @@
                 android:text="@string/input" />
         </LinearLayout>
 
+        <LinearLayout style="@style/RemoteRow">
+
+            <Button
+                android:id="@+id/hdmi_1"
+                style="@style/RemoteButton"
+                android:text="@string/hdmi_1" />
+
+            <Button
+                android:id="@+id/hdmi_2"
+                style="@style/RemoteButton"
+                android:text="@string/hdmi_2" />
+        </LinearLayout>
+
         <LinearLayout style="@style/RemoteCluster">
 
             <LinearLayout style="@style/DirectionRow">

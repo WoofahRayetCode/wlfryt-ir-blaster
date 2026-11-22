@@ -44,6 +44,8 @@ public final class MainActivity extends Activity {
         status = findViewById(R.id.ir_status);
         bind(R.id.power, VizioProfile.Button.POWER);
         bind(R.id.input, VizioProfile.Button.INPUT);
+        bind(R.id.hdmi_1, VizioProfile.Button.HDMI_1);
+        bind(R.id.hdmi_2, VizioProfile.Button.HDMI_2);
         bind(R.id.up, VizioProfile.Button.UP);
         bind(R.id.left, VizioProfile.Button.LEFT);
         bind(R.id.ok, VizioProfile.Button.OK);

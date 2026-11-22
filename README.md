@@ -2,7 +2,7 @@
 
 An offline Android remote for the **Vizio D24h-J09**, tested with the **POCO X8 Pro Max** on Android 16. It uses the phone’s built-in infrared emitter, so there’s no TV pairing or network setup for the remote itself.
 
-The app has Power, Input, a directional pad with OK, Back, Home, Mute, and volume controls. Tap to change the volume one step or hold to repeat. On the POCO X8 Pro Max, aim the back of the phone toward the TV, with the area around the rear cameras clear.
+The app has Power, Input, a directional pad with OK, Back, Home, Mute, and volume controls. Tap **HDMI 1** or **HDMI 2** to select a port directly, or use **Input** to open the TV’s source menu. Tap a volume button for one step or hold it to repeat. On the POCO X8 Pro Max, aim the back of the phone toward the TV, with the area around the rear cameras clear.
 
 The app requires Android 6.0 or newer and a phone that exposes a compatible 38 kHz emitter to Android. The D24h-J09 is the only TV model tested so far.
 
@@ -39,6 +39,7 @@ Open **Wlfryt IR Blaster** and try **Volume Up** and **Input** first to confirm 
 | --- | --- |
 | Volume Up | Volume increased with the two-button build |
 | Input | Worked with the two-button build. The full remote switched the TV to HDMI 1 for a PS5 |
+| HDMI 1 and HDMI 2 shortcuts | Both selected their matching ports directly with version 1.2 |
 | Arrows and OK | Navigation was sufficient to complete Wi-Fi setup and select HDMI 1. Each direction still needs a separate check |
 | Power | Standby and wake await separate TV confirmation |
 | Volume Down | Awaits separate TV confirmation |
@@ -47,4 +48,4 @@ Open **Wlfryt IR Blaster** and try **Volume Up** and **Input** first to confirm 
 | Home | Awaits separate TV confirmation |
 | Volume hold and release | Timing and cancellation passed unit tests. TV response awaits separate confirmation |
 
-The remote profile lives in [`VizioProfile.java`](app/src/main/java/com/wlfryt/irblaster/VizioProfile.java). Its commands come from an XRT140R capture in Flipper-IRDB. [IR capture](https://github.com/Lucaslhm/Flipper-IRDB/blob/39c3290b7177f5badb144215897d630531fefb10/TVs/Vizio/Vizio_XRT140R.ir)
+The remote profile lives in `VizioProfile.java`. It uses an XRT140R capture for the standard remote buttons and the Just Add Power Vizio command reference for direct HDMI selection. [XRT140R capture](https://github.com/Lucaslhm/Flipper-IRDB/blob/39c3290b7177f5badb144215897d630531fefb10/TVs/Vizio/Vizio_XRT140R.ir) · [HDMI commands](https://support.justaddpower.com/kb/article/250-vizio-ir-control/)
